@@ -230,8 +230,8 @@ taille_p<-function(){
 valeur_p<-function(){
     e <- get("e", parent.frame())
     selection <- getState()$val
-    print(selection)
-    print("L'ensemble des personnes interrogées dans le futur échantillon sont prêtes à voter pour le candidat")
+    readline(selection)
+    readline("L'ensemble des personnes interrogées dans le futur échantillon sont prêtes à voter pour le candidat")
     return(if(e$vs$qalea) ((regexpr("Dans la deuxi",selection)!=-1) & (regexpr("ensemble des intentions de vote",selection)!=-1)) else ((regexpr("Dans la deuxi",selection)!=-1) & (regexpr("ier individu",selection)!=-1)) )
 }
 
