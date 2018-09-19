@@ -220,7 +220,7 @@ valeur_echantillon<-function(){
 ON_valeur_echantillon<-function(){
     e <- get("e", parent.frame())
     selection <- getState()$val
-    return(if(e$vs$qalea) (regexpr("alea",selection)!=-1) else (regexpr("Oui",selection)!=-1))
+    return(if(e$vs$qalea) (regexpr("atoir",selection)!=-1) else (regexpr("Oui",selection)!=-1))
 }
 
 taille_p<-function(){
