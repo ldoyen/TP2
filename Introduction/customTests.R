@@ -230,6 +230,8 @@ taille_p<-function(){
 valeur_p<-function(){
     e <- get("e", parent.frame())
     selection <- getState()$val
+    print(selection)
+    print("L'ensemble des personnes interrogées dans le futur échantillon sont prêtes à voter pour le candidat")
     return(selection==(if(e$vs$qalea) "Dans la deuxième réalisation de l'échantillon, l'ensemble des intentions de vote simulées sont en faveur du candidat" else "L'ensemble des personnes interrogées dans le futur échantillon sont prêtes à voter pour le candidat"))
 }
 
